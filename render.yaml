@@ -3,5 +3,7 @@ services:
     name: climatiq-backend
     env: python
     plan: free
+    envVars:
+      PYTHON_VERSION: 3.10.13
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
